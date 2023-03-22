@@ -1,7 +1,8 @@
 # Team Name
 
 ### Team Members
-
+    Dong Gai
+    Yutong Jiang
 ### Final Proposal
 1. Persona/Scenario
     1. Persona
