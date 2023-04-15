@@ -29,14 +29,14 @@
 Scroll-down: Display the text box for introducing the specific year and area of the terrain area. 
 </td></tr>
 <tr><td><b>Hover</b></td> <td>Retrieve attributes. Dynamic popup terrain information allows users to click the line or points on the map.</td></tr>
+</table>
 
-3. Wireframes
 <h3><b><ins>Lo-Fi wireframes</ins>:</b></h3>
 <br>
-<img src = "img/wireframe1">
-<img src = "img/wireframe2">
-<img src = "img/wireframe3">
-<img src = "img/wireframe4">
+<img src = "https://github.com/daniell23/2023_FinalProject/blob/main/img/wireframe1.jpg">
+<img src = "https://github.com/daniell23/2023_FinalProject/blob/main/img/wireframe2.jpg">
+<img src = "https://github.com/daniell23/2023_FinalProject/blob/main/img/wireframe3.jpg">
+<img src = "https://github.com/daniell23/2023_FinalProject/blob/main/img/wireframe4.jpg">
 
 
 
