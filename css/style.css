@@ -1,1 +1,6 @@
 /*insert style here*/
+
+#map{
+    height: 500px !important;
+    width: 500px !important;
+}
