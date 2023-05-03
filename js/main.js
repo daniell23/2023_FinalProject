@@ -13,7 +13,7 @@ let opts = {
         },
     },
     elevationControl: {
-        url: "https://raruto.github.io/leaflet-elevation/examples/via-emilia.gpx",
+        url: "https://github.com/daniell23/2023_FinalProject/blob/main/data/road_NE.geojson",
         options: {
             theme: "lightblue-theme",
             collapsed: false,
