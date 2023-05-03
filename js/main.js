@@ -1,7 +1,7 @@
 
 let opts = {
     map: {
-        center: [41.4583, 12.7059],
+        center: [38.0655, -97.9202],
         zoom: 5,
         fullscreenControl: false,
         resizerControl: true,
@@ -13,7 +13,7 @@ let opts = {
         },
     },
     elevationControl: {
-        url: "https://github.com/daniell23/2023_FinalProject/blob/main/data/road_NE.geojson",
+        url: "data/elevation.geojson",
         options: {
             theme: "lightblue-theme",
             collapsed: false,
@@ -47,6 +47,9 @@ let map = L.map('map', opts.map);
 let controlElevation = L.control.elevation(opts.elevationControl.options).addTo(map);
 let controlLayer = L.control.layers(null, null, opts.layersControl.options);
 
-controlElevation.on('eledata_loaded', ({layer, name}) => controlLayer.addTo(map) && layer.eachLayer((trkseg) => trkseg.feature.geometry.type != "Point" && controlLayer.addOverlay(trkseg, trkseg.feature && trkseg.feature.properties && trkseg.feature.properties.name || name)));
 
 controlElevation.load(opts.elevationControl.url);
+
+controlElevation.on('eledata_loaded', ({layer, name}) => controlLayer.addTo(map) && layer.eachLayer((trkseg) => trkseg.feature.geometry.type != "Point" && controlLayer.addOverlay(trkseg, trkseg.feature && trkseg.feature.properties && trkseg.feature.properties.name || name)));
+
+//controlElevation.load(opts.elevationControl.url);
