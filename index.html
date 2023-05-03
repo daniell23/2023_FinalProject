@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/leaflet-ui@0.6.0/dist/leaflet-ui.js"></script>
 
     <!-- leaflet-elevation -->
-    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
+    <link rel="stylesheet" href="css/leaflet-elevation.css" />
     <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
 </head>
@@ -19,59 +19,8 @@
 
 	<div id="map" class="leaflet-map"></div>
 
-	<script>
-		let opts = {
-			map: {
-				center: [41.4583, 12.7059],
-				zoom: 5,
-				fullscreenControl: false,
-				resizerControl: true,
-				preferCanvas: true,
-				rotate: true,
-				// bearing: 45,
-				rotateControl: {
-					closeOnZeroBearing: true
-				},
-			},
-			elevationControl: {
-				url: "https://raruto.github.io/leaflet-elevation/examples/via-emilia.gpx",
-				options: {
-					theme: "lightblue-theme",
-					collapsed: false,
-					autohide: false,
-					autofitBounds: true,
-					position: "bottomleft",
-					detached: true,
-					summary: "inline",
-					imperial: false,
-					// altitude: "disabled",
-					slope: "disabled",
-					speed: false,
-					acceleration: false,
-					time: "summary",
-					legend: true,
-					followMarker: true,
-					almostOver: true,
-					distanceMarkers: false,
-					hotline: false,
-				},
-			},
-			layersControl: {
-				options: {
-					collapsed: false,
-				},
-			},
-		};
+	<script type="text/javascript" src="js/main.js"></script>
 
-		let map = L.map('map', opts.map);
-
-		let controlElevation = L.control.elevation(opts.elevationControl.options).addTo(map);
-		let controlLayer = L.control.layers(null, null, opts.layersControl.options);
-
-		controlElevation.on('eledata_loaded', ({layer, name}) => controlLayer.addTo(map) && layer.eachLayer((trkseg) => trkseg.feature.geometry.type != "Point" && controlLayer.addOverlay(trkseg, trkseg.feature && trkseg.feature.properties && trkseg.feature.properties.name || name)));
-
-		controlElevation.load(opts.elevationControl.url);
-	</script>
 
 
 	<!--<a href="https://github.com/Raruto/leaflet-elevation" class="view-on-github" style="position: fixed;top: 30px;left: calc(50% - 81px);z-index: 9999;"> <img alt="View on Github" src="https://raruto.github.io/img/view-on-github.png" title="View on Github" width="163"> </a>-->
