@@ -1,10 +1,27 @@
 
+let mylocale = {
+    "Total Length: ": "L: ",
+    "Max Elevation: ": "E Max: ",
+    "Min Elevation: ": "E Min: ",
+    "Avg Elevation: ": "E Avg: ",
+    "Total Ascent: ": "A: ",
+    "Total Descent: ": "D: ",
+    "Min Slope: ": "S Min: ",
+    "Max Slope: ": "S Max: ",
+    "Avg Slope: ": "S Avg: ",
+};
+
+L.registerLocale('it', mylocale);
+L.setLocale('it');
+
 let opts = {
     map: {
-        center: [38.0655, -97.9202],
+        center: [41.4583, 12.7059],
         zoom: 5,
         fullscreenControl: false,
-        resizerControl: true,
+        resizerControl: false,
+        minimapControl: false,
+        gestureHandling: false,
         preferCanvas: true,
         rotate: true,
         // bearing: 45,
@@ -13,26 +30,26 @@ let opts = {
         },
     },
     elevationControl: {
-        url: "data/elevation.geojson",
+        tracks: {
+            track_1: {
+                url: "data/elevation.geojson",
+                color: "#3490dc"
+            },
+            track_2: {
+                url: "data/highway_20.geojson",
+                color: "#f6993f"
+            },
+            track_3: {
+                url: "data/highway_75.geojson",
+                color: "#f6993f"
+            },
+        },
         options: {
-            theme: "lightblue-theme",
-            collapsed: false,
-            autohide: false,
-            autofitBounds: true,
             position: "bottomleft",
+            collapsed: false,
             detached: true,
-            summary: "inline",
-            imperial: false,
-            // altitude: "disabled",
-            slope: "disabled",
-            speed: false,
-            acceleration: false,
-            time: "summary",
-            legend: true,
-            followMarker: true,
-            almostOver: true,
-            distanceMarkers: false,
-            hotline: false,
+            slope: true,
+            edgeScale: true
         },
     },
     layersControl: {
@@ -45,11 +62,45 @@ let opts = {
 let map = L.map('map', opts.map);
 
 let controlElevation = L.control.elevation(opts.elevationControl.options).addTo(map);
-let controlLayer = L.control.layers(null, null, opts.layersControl.options);
+let controlLayer = L.control.layers(null, null, opts.layersControl.options).addTo(map);
 
+let tracks = opts.elevationControl.tracks;
+let i = 0;
 
-controlElevation.load(opts.elevationControl.url);
+let layers = L.layerGroup();
 
-controlElevation.on('eledata_loaded', ({layer, name}) => controlLayer.addTo(map) && layer.eachLayer((trkseg) => trkseg.feature.geometry.type != "Point" && controlLayer.addOverlay(trkseg, trkseg.feature && trkseg.feature.properties && trkseg.feature.properties.name || name)));
+for (let track in tracks) {
+    loadTrace(tracks[track].url, i++);
+}
 
-//controlElevation.load(opts.elevationControl.url);
+layers.on('tracks_loaded', () => console.dir("Tracks Loaded: ", layers.getLayers()));
+
+function loadTrace(url, i) {
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            let layer = L.geoJson(data);
+            layers.addLayer(layer);
+            controlLayer.addBaseLayer(layer, data.name || url.split('/').pop());
+            if (i == 0) initHooks(layer._leaflet_id);
+            else if (i == Object.values(tracks).length - 1) layers.fire('tracks_loaded');
+        });
+}
+
+function setElevationTrace(id) {
+    let layer = layers.getLayer(id);
+    let data = layer.toGeoJSON();
+    data.features = data.features.filter(f => f.geometry.type != "Point");
+    if (!map.hasLayer(layer)) layer.addTo(map);
+    controlElevation.clear();
+    controlElevation.addData(data, layer);
+    map.fitBounds(layer.getBounds());
+}
+
+function initHooks(id) {
+    setElevationTrace(id);
+    map.on("baselayerchange", function(e) {
+        let layer = layers.getLayer(e.layer._leaflet_id);
+        if (layer) setElevationTrace(layer._leaflet_id);
+    });
+}

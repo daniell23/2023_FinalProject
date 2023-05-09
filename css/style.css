@@ -33,3 +33,10 @@ body{
 .title_map{
     font-size: 20px;
 }
+
+.elevation-summary.inline-summary {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 0.85em;
+    text-align: center;
+}
