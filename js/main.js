@@ -43,6 +43,10 @@ let opts = {
                 url: "data/highway_75.geojson",
                 color: "#f6993f"
             },
+            track_4: {
+                url: "data/highway_80.geojson",
+                color: "#f6993f"
+            },
         },
         options: {
             position: "bottomleft",
@@ -104,3 +108,4 @@ function initHooks(id) {
         if (layer) setElevationTrace(layer._leaflet_id);
     });
 }
+
