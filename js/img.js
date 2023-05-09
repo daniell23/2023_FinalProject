@@ -1,16 +1,15 @@
-var map = L.map('map', {
+var map2 = L.map('map2', {
     center: [41.3544, -99.3],
     zoom: 8
 });
 // we add some test layers here
 var osmAttrib = 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC';
-var osm = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC'
-}).addTo(map); 
+var osm = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC'
+}).addTo(map2); 
 var cycle = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 18,
     attribution: osmAttrib
-}).addTo(map); // this will be our active base layer on startup
+}).addTo(map2); // this will be our active base layer on startup
 /*
 // a layer group with one marker
 var cities = new L.LayerGroup([
@@ -60,5 +59,5 @@ var videoOverlay = L.videoOverlay(videoUrls, latLngBounds, {
     autoplay: true,
     muted: true,
     playsInline: true
-}).addTo(map);
+}).addTo(map2);
 

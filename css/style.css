@@ -1,8 +1,7 @@
 /*insert style here*/
 
 #map {
-    height: 500px !important;
-    width: auto !important;
+    height: 450px !important;
 }
 
 html,
@@ -21,6 +20,16 @@ body{
     text-align: left;
 }
 
-head1{
+.head1{
     text-align: middle;
+}
+
+#map2{
+    position:auto;
+    height: 500px;
+    width: 900px;
+}
+
+.title_map{
+    font-size: 20px;
 }
