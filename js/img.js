@@ -1,4 +1,3 @@
-function createMap(){
 var map2 = L.map('map2', {
     center: [41.3544, -99.3],
     zoom: 8
@@ -11,7 +10,6 @@ var cycle = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Na
     maxZoom: 18,
     attribution: osmAttrib
 }).addTo(map2); // this will be our active base layer on startup
-}
 /*
 // a layer group with one marker
 var cities = new L.LayerGroup([
@@ -62,3 +60,4 @@ var videoOverlay = L.videoOverlay(videoUrls, latLngBounds, {
     muted: true,
     playsInline: true
 }).addTo(map2);
+
