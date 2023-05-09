@@ -2,55 +2,25 @@
 
 #map {
     height: 500px !important;
-    width: 500px !important;
+    width: auto !important;
 }
+
+html,
+
 .header {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 20px;
-  }
-  
-  html, body {
-    background-color: #F8F3ED;
+}
+
+body{
+    background-color: #cba87d;
     color: #1A1A1A;
     font-family: "open sans", "verdana", "sans-serif";
-  }
-  
-
-#p {
-    margin-top: 100;
-    /* remove default top margin */
-    margin-bottom: 1rem;
-    /* add desired bottom margin */
-    margin: 10;
+    margin: 10px;
+    text-align: left;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 80px;
-    margin: 0 0 -15px 0;
-    font-weight: bold;
-    font-family: "special elite", "open sans", "verdana", "sans-serif";
-}
-
-h2 {
-    font-size: 44px;
-    font-weight: bold;
-    font-family: "open sans", "verdana", "sans-serif";
-}
-
-h3 {
-    font-size: 30px;
-    font-family: "open sans", "verdana", "sans-serif";
-    padding-bottom: 7px
-}
-
-h4 {
-    font-size: 20px;
-    font-family: "open sans", "verdana", "sans-serif";
-}
-
-p {
-    font-size: 16px;
-    line-height: 27px;
+head1{
+    text-align: middle;
 }
