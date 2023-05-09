@@ -4,26 +4,17 @@
 <head>
     <title>leaflet-elevation.js</title>
     <style>
-        html,
-        body,
-        #map,
-        #elevation-div {
-            height: 100%;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-
-        #map {
-            height: 75%;
-        }
-
-        #elevation-div {
-            height: 25%;
-            font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        }
     </style>
-    <h2 class="title_map" data-assembly-id="116049" ><strong>Terrain on the Great Plain: Map of Physical Landscape of Nerbraska</strong></h2>
+    <h2 class="title_map" data-assembly-id="116049" ><strong>Terrain on the Great Plain: Map of Physical Landscape of Nerbraska</strong> <button onclick="openPopup()">Intro</button></h2>
+
+
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>Welcome to Explore Nebraska</h2>
+        <p>This is a brief introduction to my website.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    </div>
     <!-- leaflet-ui -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-ui@0.6.0/dist/leaflet-ui.js"></script>
@@ -41,7 +32,7 @@
     <div id="map" class="leaflet-map"></div>
     <script type="text/javascript" src="js/main.js"></script>
 
-    
+
 
 
 

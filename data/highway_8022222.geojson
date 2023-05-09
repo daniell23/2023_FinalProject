@@ -1,23 +1,15 @@
 {
-    "type": "FeatureCollection",
-    "name": "Highway_83",
-    "crs": {
-        "type": "name",
-        "properties": {
-            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
-        }
-    },
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "begin": "1",
-                "end": "275"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
+	"name": "waypoints.geojson",
+	"type": "FeatureCollection",
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"name": "waypoints"
+			},
+			"geometry": {
+				"type": "LineString",
+				"coordinates": [
+					[
                         -100.648649986411442,
                         40.209142213482671,
                         803.703
@@ -1392,8 +1384,70 @@
                         42.803786395226503,
                         812.134
                     ]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Vista Ridge Trailhead",
+				"desc": "<a href=\"#wpt-00\" class=\"wpt-link-image\"> <img src=\"https://raruto.github.io/leaflet-elevation/examples/waypoints/wpt-00.png\"></a><br>Coordinates: 45.44283, -121.72904 Altitude: 1371 m<div class=\"wpt-desc\"> to the north side of Mount Hood <div>",
+				"sym": "Trail Head"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+                    -100.750131473825178,
+                    41.194071370030876,
+                    877.533
                 ]
-            }
-        }
-    ]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Wy'East Basin",
+				"desc": "<a href=\"#wpt-01\" class=\"wpt-link-image\"> <img src=\"https://raruto.github.io/leaflet-elevation/examples/waypoints/wpt-01.png\"></a><br>Coordinates: 45.41, -121.7134 Altitude: 1775 m<div class=\"wpt-desc\"> small meadow area, with great views North <div>"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+                    -100.549920526516317,
+                    41.931846281506473,
+                    903.528
+                ]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Dollar Lake",
+				"desc": "<a href=\"#wpt-02\" class=\"wpt-link-image\"> <img src=\"https://raruto.github.io/leaflet-elevation/examples/waypoints/wpt-02.png\"></a><br>Coordinates: 45.41124, -121.70404 Altitude: 1819 m<div class=\"wpt-desc\"> small, round, and with a sandy bottom <div>"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+                    -100.536457198282548,
+                    42.633297876106141,
+                    877.808
+                ]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Barrett Spur",
+				"desc": "<a href=\"#wpt-03\" class=\"wpt-link-image\"> <img src=\"https://raruto.github.io/leaflet-elevation/examples/waypoints/wpt-03.png\"></a><br>Coordinates: 45.3926, -121.69937 Altitude: 2390 m<div class=\"wpt-desc\"> imposing mass that you can see from Portland <div>",
+				"sym": "Summit"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+                    -100.535957556381135,
+                    42.781800229877803,
+                    820.767
+                ]
+			}
+		}
+	]
 }
