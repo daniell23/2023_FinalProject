@@ -5,14 +5,16 @@
     <title>leaflet-elevation.js</title>
     <style>
     </style>
-    <h2 class="title_map" data-assembly-id="116049" ><strong>Terrain on the Great Plain: Map of Physical Landscape of Nerbraska</strong> <button onclick="openPopup()">Intro</button></h2>
+    <h2 class="title_map" data-assembly-id="116049" ><strong>Terrain on the Great Plain: Map of Physical Landscape of Nerbraska</strong>   
+        <button id="introButton" onclick="openPopup()">Intro</button></h2>
 
 
     <div id="popup" class="popup">
     <div class="popup-content">
-        <h2>Welcome to Explore Nebraska</h2>
-        <p>This is a brief introduction to my website.</p>
-        <button onclick="closePopup()">Close</button>
+        <h2>Welcome to Explore Nebraska!</h2>
+        <p>This is an interactive map for exploring the elevation and slope along several essential highways across the Nebraska State. In our map, you can click the specific highway you want to explore and can check the elevation and slope attribute for every point along the highway. Furthermore, you can use the search function to relocate, and use the people function to view the environment around the highway, etc. </p>
+        <p>When you scroll down, you can find more information about the physical landscape information about Nebraska. Hope you can find interesting things and always exploring!</p>
+        <button id = "close_button" onclick="closePopup()">Close</button>
     </div>
     </div>
     <!-- leaflet-ui -->
@@ -26,119 +28,84 @@
 
 </head>
 
-
 <body>
 
     <div id="map" class="leaflet-map"></div>
     <script type="text/javascript" src="js/main.js"></script>
 
 
-
-
-
-    <!-- Splash Screen Modal -->
-    <div class="modal fade" id="splash-screen" tabindex="-1" role="dialog" aria-labelledby="splash-screen"
-        aria-hidden="true" data-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-            <div class="modal-content">
-                <div class="assemblies medialist slider js-slider position-relative d-inline-flex align-items-center mw-100"
-                    data-type="other">
-                    <div
-                        class="slider-container js-slider-container overflow-hidden d-flex rw-slider rw-next-disabled rw-prev-disabled">
-                        <div class="rw-track d-flex align-items-center">
-                            <div class="rw-slide col-100 px-20">
-                                <h2 class="md-assembly card print-false" data-assembly-id="116049"><strong>Breif
-                                        introduction to Nerbraska</strong></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="assemblies medialist slider js-slider position-relative d-inline-flex align-items-center mw-100"
-                        data-type="other">
-                        <div
-                            class="slider-container js-slider-container overflow-hidden d-flex rw-slider rw-next-disabled rw-prev-disabled">
-                            <div class="rw-track d-flex align-items-center">
-                                <div class="rw-slide col-100 px-20">
-                                </div>
-                            </div>
-                        </div>
-                        <p class="topic-paragraph"><strong><span
-                                    id="ref614206"></span>Nebraska</strong>,<span>&nbsp;</span>constituent<span>&nbsp;</span>state<span>&nbsp;</span>of
-                            the<span>&nbsp;</span>United States<span>&nbsp;</span>of America. It was admitted to the
-                            union as the 37th state on March 1, 1867. <strong>Nebraska</strong> is bounded by the state
-                            of<span>&nbsp;</span>South Dakota<span>&nbsp;</span>to the north, with
-                            the<span>&nbsp;</span><strong>Missouri River</strong><span>&nbsp;</span>making up about
-                            one-fourth of that boundary and the whole of <strong>Nebraska&rsquo;s</strong> boundaries
-                            with the states
-                            of<span>&nbsp;</span>Iowa<span>&nbsp;</span>and<span>&nbsp;</span>Missouri<span>&nbsp;</span>to
-                            the east. The boundary with<span>&nbsp;</span>Kansas<span>&nbsp;</span>to the south was
-                            established when the two territories were created by
-                            the<span>&nbsp;</span><strong>Kansas-Nebraska</strong> Act<span>&nbsp;</span>in 1854. In the
-                            southwestern part of the state, the boundary
-                            with<span>&nbsp;</span>Colorado<span>&nbsp;</span>forms a right angle (south and west),
-                            which creates <strong>Nebraska&rsquo;s</strong> panhandle, to the west of which is the
-                            boundary with<span>&nbsp;</span>Wyoming.<span>&nbsp;</span>Lincoln, in the southeastern part
-                            of the state, is the capital.</p>
-                        <p class="topic-paragraph">As one of the west-central states of the United States,
-                            <strong>Nebraska</strong> was primarily a stopover point for
-                            those<span>&nbsp;</span>migrating<span>&nbsp;</span>to the rich trapping country to the
-                            north and west as well as to the settlement and mining frontiers of the mountain and Pacific
-                            regions during the first half of the 19th century. With the development of railroads after
-                            the<span>&nbsp;</span>American Civil War<span>&nbsp;</span>(1861&ndash;65) and the
-                            consequent immigration, the fertile soils of <strong>Nebraska</strong> were plowed, and its
-                            grasslands gave rise to a range cattle industry. As a result, the state has been a major
-                            food producer since statehood.
-                            <br><img src="img/nebraska2.jpeg" width="300" height="300" alt=""/>
-                        </p>
-                        <p class="topic-paragraph">Rivers have been important to <strong>Nebraska&rsquo;s</strong>
-                            geography and settlement. A majority of <strong>Nebraskans</strong> live close to
-                            the<span>&nbsp;</span><span
-                                id="ref614963"></span>Missouri<span>&nbsp;</span>and<span>&nbsp;</span><span
-                                id="ref614207"></span>Platte<span>&nbsp;</span>rivers, leaving much of the state lightly
-                            populated. The Missouri was a major highway to the trans-Mississippi West in the early 19th
-                            century. The Platte River has also played a significant role in
-                            <strong>Nebraska&rsquo;s</strong> history. In fact, the state&rsquo;s name is derived from
-                            the<span>&nbsp;</span>Oto<span>&nbsp;</span>Indian<span>&nbsp;</span>word
-                            <strong>Nebrathka</strong> (&ldquo;Flat Water&rdquo;), a reference to the Platte. Area
-                            77,347 square miles (200,329 square km). Population (2020) 1,961,504; (2022 est.) 1,967,923.
-                        </p>
-                        <p class="image"><img align="right" src="img/nebraska1.jpeg" width="300",height='300'  alt=""/></p>
-                    </div>
-                </div>
-            </div>
-</body>
-<h2 class="h1">Land</h2>
-<div class="md-sentinel--spy-target"></div>
-<section id="ref78818" data-level="2" data-has-spy="true">
-    <div class="assemblies">
-        <div class="w-100">
-            <figure class="md-assembly card print-false" data-assembly-id="64101">
-                <div class="md-assembly-wrapper card-media" data-type="image"><img
-                        src="https://cdn.britannica.com/03/20603-050-3194070D/Nebraska-map-features-MAP-locator-CORE-ARTICLES.jpg?w=300"
-                        alt="Nebraska" data-width="1600" data-height="1118" loading="eager" /></div>
-                <figcaption class="card-body">Nebraska</figcaption>
-            </figure>
-        </div>
+    <br><h2 class="h1" ><strong>Breif introduction to Nerbraska</strong></h2>
+    <div class="container1">
+        <img src="img/nebraska2.jpeg" alt="Image" class="image">
+        <p class="paragraph"><strong>Nebraska</strong>,<span>&nbsp;</span>constituent<span>&nbsp;</span>state<span>&nbsp;</span>of
+            the<span>&nbsp;</span>United States<span>&nbsp;</span>of America. It was admitted to the
+            union as the 37th state on March 1, 1867. <strong>Nebraska</strong> is bounded by the state
+            of<span>&nbsp;</span>South Dakota<span>&nbsp;</span>to the north, with
+            the<span>&nbsp;</span><strong>Missouri River</strong><span>&nbsp;</span>making up about
+            one-fourth of that boundary and the whole of <strong>Nebraska&rsquo;s</strong> boundaries
+            with the states
+            of<span>&nbsp;</span>Iowa<span>&nbsp;</span>and<span>&nbsp;</span>Missouri<span>&nbsp;</span>to
+            the east. The boundary with<span>&nbsp;</span>Kansas<span>&nbsp;</span>to the south was
+            established when the two territories were created by
+            the<span>&nbsp;</span><strong>Kansas-Nebraska</strong> Act<span>&nbsp;</span>in 1854. In the
+            southwestern part of the state, the boundary
+            with<span>&nbsp;</span>Colorado<span>&nbsp;</span>forms a right angle (south and west),
+            which creates <strong>Nebraska&rsquo;s</strong> panhandle, to the west of which is the
+            boundary with<span>&nbsp;</span>Wyoming.<span>&nbsp;</span>Lincoln, in the southeastern part
+            of the state, is the capital.<br>
+        <br>As one of the west-central states of the United States,
+            <strong>Nebraska</strong> was primarily a stopover point for
+            those<span>&nbsp;</span>migrating<span>&nbsp;</span>to the rich trapping country to the
+            north and west as well as to the settlement and mining frontiers of the mountain and Pacific
+            regions during the first half of the 19th century. With the development of railroads after
+            the<span>&nbsp;</span>American Civil War<span>&nbsp;</span>(1861&ndash;65) and the
+            consequent immigration, the fertile soils of <strong>Nebraska</strong> were plowed, and its
+            grasslands gave rise to a range cattle industry. As a result, the state has been a major
+            food producer since statehood. <br>
+        <br>Rivers have been important to <strong>Nebraska&rsquo;s</strong>
+            geography and settlement. A majority of <strong>Nebraskans</strong> live close to
+            the<span>&nbsp;</span><span
+            id="ref614963"></span>Missouri<span>&nbsp;</span>and<span>&nbsp;</span><span
+            id="ref614207"></span>Platte<span>&nbsp;</span>rivers, leaving much of the state lightly
+            populated. The Missouri was a major highway to the trans-Mississippi West in the early 19th
+            century. The Platte River has also played a significant role in
+            <strong>Nebraska&rsquo;s</strong> history. In fact, the state&rsquo;s name is derived from
+            the<span>&nbsp;</span>Oto<span>&nbsp;</span>Indian<span>&nbsp;</span>word
+            <strong>Nebrathka</strong> (&ldquo;Flat Water&rdquo;), a reference to the Platte. Area
+            77,347 square miles (200,329 square km). Population (2020) 1,961,504; (2022 est.) 1,967,923.
+        </p>
     </div>
-    <p class="topic-paragraph">Nebraska<span>&nbsp;</span>comprises<span>&nbsp;</span>parts of two of the United
-        States&rsquo; principal physiographic regions&mdash;the till plains of the Central Lowland (in the eastern third
-        of the state) and the<span>&nbsp;</span>Great Plains<span>&nbsp;</span>(which makes up the centre of the state).
-    </p>
-    <div id="map2" class="leaflet-map"></div>
-    <script type="text/javascript" src="js/img.js"></script>
-    <span class="marker p4"></span><span class="marker AM4 am-inline"></span><span
-        class="marker MOD4 mod-inline"></span>
-    <p class="topic-paragraph">The<span>&nbsp;</span><span id="ref799667"></span>Sand Hills<span>&nbsp;</span>region of
-        north-central and northwestern Nebraska is one of the state&rsquo;s most distinctive
-        features.<span>&nbsp;</span>Comprising<span>&nbsp;</span>nearly one-fourth of the area of the state, it consists
-        of sloping hills and valleys varying from 25 to 400 feet (8 to 120 metres) in elevation. With many small lakes
-        and luxuriant grasses, the Sand Hills area is a superb rangeland.</p>
-    <span class="marker p5"></span><span class="marker AM5 am-inline"></span><span
-        class="marker MOD5 mod-inline"></span>
-    <p class="topic-paragraph">Elevation in Nebraska rises from a minimum of 840 feet (256 metres)
-        above<span>&nbsp;</span>sea level<span>&nbsp;</span>in the southeast to a maximum of 5,426 feet (1,654 metres)
-        near the Colorado and Wyoming boundaries. Much of the land is gently rolling<span>&nbsp;</span>prairie, although
-        the river valleys, much of south-central Nebraska, and a large portion of the panhandle district are flatlands.
-    </p>
+      
+    <h2 class="h1">Landcover</h2>
+
+
+    <div class="container2">
+        <div id="map2" class="leaflet-map"></div>
+        <script type="text/javascript" src="js/img.js"></script> 
+        <p class="paragraph2">Nebraska<span>&nbsp;</span>comprises<span>&nbsp;</span>parts of two of the United
+            States&rsquo; principal physiographic regions&mdash;the till plains of the Central Lowland (in the eastern third
+            of the state) and the<span>&nbsp;</span>Great Plains<span>&nbsp;</span>(which makes up the centre of the state).<br>
+        <br>The<span>&nbsp;</span><span id="ref799667"></span>Sand Hills<span>&nbsp;</span>region of
+            north-central and northwestern Nebraska is one of the state&rsquo;s most distinctive
+            features.<span>&nbsp;</span>Comprising<span>&nbsp;</span>nearly one-fourth of the area of the state, it consists
+            of sloping hills and valleys varying from 25 to 400 feet (8 to 120 metres) in elevation. With many small lakes
+            and luxuriant grasses, the Sand Hills area is a superb rangeland.<br>
+        <br>Elevation in Nebraska rises from a minimum of 840 feet (256 metres)
+            above<span>&nbsp;</span>sea level<span>&nbsp;</span>in the southeast to a maximum of 5,426 feet (1,654 metres)
+            near the Colorado and Wyoming boundaries. Much of the land is gently rolling<span>&nbsp;</span>prairie, although
+            the river valleys, much of south-central Nebraska, and a large portion of the panhandle district are flatlands.
+        </p>
+    </div>
+    <div class="container3">
+        <p class = "paragraph3">
+            <br>Data Source: <a href = 'https://uw-mad.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc'> ArcGIS Online Gallery</a>, 
+            <a href = 'https://www.nebraskamap.gov/datasets/190f9fabe7e6420bb1bb418f72d34715_4/explore?location=41.178362%2C-97.308265%2C6.51'> Nebraska Highway Data</a>,
+            <a href = 'https://github.com/Raruto/leaflet-elevation'> Interactive Map Source github</a>
+            | Cartographers: <a href = 'https://github.com/daniell23/2023_FinalProject'> Dong Gai</a> (dgai@wisc.edu) 
+            <br>
+        </p>
+    </div>
+
 </section>
 
 
