@@ -1,165 +1,169 @@
 /*insert style here*/
 
 #elevation-div {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 
 
 #elevation-div {
-    height: 25%;
-    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  height: 25%;
+  font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
 #map {
-    height: 400px !important;
-    width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-color: #548eb5 !important;
-    border-style: inset; 
-    border-width: 5px;
+  height: 400px !important;
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-color: #548eb5 !important;
+  border-style: inset;
+  border-width: 5px;
 }
 
 .header {
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 20px;
 }
 
-body{
-    background-color: #cba87d;
-    color: #1A1A1A;
-    font-family: "open sans", "verdana", "sans-serif";
-    text-align: left;
+body {
+  background-color: #cba87d;
+  color: #1A1A1A;
+  font-family: "open sans", "verdana", "sans-serif";
+  text-align: left;
 }
 
-.head1{
-    text-align: middle;
+.head1 {
+  text-align: middle;
 }
 
-#map2{
-    position:auto;
-    height: 600px;
-    width: 900px;
+#map2 {
+  position: auto;
+  height: 600px;
+  width: 900px;
+  border-color: #4e4f4f !important;
+  border-style:inset;
 }
 
-.title_map{
-    margin-top: 5px !important;
-    font-size: 25px;
-    text-align: center;
-    font-family: "Comic Sans MS", cursive;
-    font-weight: bold;
-    height: 20px;
-    margin:20px;
+.title_map {
+  margin-top: 5px !important;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  height: 20px;
+  margin: 20px;
 
 }
 
 
 .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 50%;
-    background-color: rgba(194, 167, 167, 0.7);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    border-color: #5f5a54 !important;
-    border-style: inset; 
-    border-width: 5px;
-  }
-  
-  .popup-content h2 {
-    position:relative;
-    text-align: center;
-    margin-top: 0;
-  }
-  
-  .popup-content p {
-    margin-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  background-color: rgba(194, 167, 167, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  border-color: #5f5a54 !important;
+  border-style: inset;
+  border-width: 5px;
+}
 
-  #introButton {
-    width:60px;
-    height: 35px;
-    padding: 0px;
-    position: absolute;
-    top: 9px;
-    right: 40px;
-    background-color: #cba87d;
-    font-family: "Comic Sans MS", cursive;
-    font-size: 15px;
-  }
+.popup-content h2 {
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#introButton {
+  width: 60px;
+  height: 35px;
+  padding: 0px;
+  position: absolute;
+  top: 9px;
+  right: 40px;
+  background-color: #cba87d;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 15px;
+}
 
 #close_button {
-    width:60px;
-    height: 35px;
-    padding: 0px;
-    position: absolute;
-    top: 9px;
-    right: 40px;
-    background-color: #eae8e6;
-    font-family: "Comic Sans MS", cursive;
-    font-size: 15px;
+  width: 60px;
+  height: 35px;
+  padding: 0px;
+  position: absolute;
+  top: 9px;
+  right: 40px;
+  background-color: #eae8e6;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 15px;
 }
 
 
 .container1 {
-    display: flex;
-    align-items: center;
-  }
-  
-  .image {
-    order:2;
-    width: 30%; /* Adjust the width of the image to 30% */
-    height: 400px;
-    width: 500px;
-  }
-  
-  .paragraph {
-    width: 70%; /* Adjust the width of the paragraph to 70% */
-  }
+  display: flex;
+  align-items: center;
+}
 
-  .container2 {
-    display: flex;
-    align-items: center;
-  }
-  
-  .leaflet-map {
-    /* Add any specific styles for the map container here */
-    position:auto;
-    height: 600px;
-    width: 900px;
-  }
-  
-  .paragraph2 {
-    /* Add any specific styles for the paragraph here */
-    order:1;
-    padding-left: 30px;
-    width: 35%;
-  }
-  
-  .h1{
-    padding-left: 40px;
-    font-family: "Comic Sans MS", cursive;
-  }
+.image {
+  order: 2;
+  width: 30%;
+  /* Adjust the width of the image to 30% */
+  height: 400px;
+  width: 500px;
+}
+
+.paragraph {
+  width: 70%;
+  /* Adjust the width of the paragraph to 70% */
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+}
+
+.leaflet-map {
+  /* Add any specific styles for the map container here */
+  position: auto;
+  height: 600px;
+  width: 900px;
+}
+
+.paragraph2 {
+  /* Add any specific styles for the paragraph here */
+  order: 1;
+  padding-left: 30px;
+  width: 35%;
+}
+
+.h1 {
+  padding-left: 40px;
+  font-family: "Comic Sans MS", cursive;
+}
 
 .container3 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.paragraph3{
-    margin: 0 auto;
-    font-size: small;
+.paragraph3 {
+  margin: 0 auto;
+  font-size: small;
 }
-
