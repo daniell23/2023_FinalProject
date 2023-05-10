@@ -18,13 +18,13 @@ let opts = {
     map: {
         center: [41.4583, 12.7059],
         zoom: 5,
-        fullscreenControl: false,
+        fullscreenControl: true,
         resizerControl: false,
         minimapControl: false,
         gestureHandling: false,
         preferCanvas: true,
         rotate: true,
-        // bearing: 45,
+        //bearing: 45,
         rotateControl: {
             closeOnZeroBearing: true
         },
@@ -49,11 +49,15 @@ let opts = {
             },
         },
         options: {
+            time: true,
+            distance: true,
+            ruler: true,
+            legend: true,
+            hotline: true,
             position: "bottomleft",
             collapsed: false,
             detached: true,
             slope: true,
-            edgeScale: true
         },
     },
     layersControl: {

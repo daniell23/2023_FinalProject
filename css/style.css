@@ -45,6 +45,9 @@ body{
     position:auto;
     height: 600px;
     width: 900px;
+    border-color: #4e4f4f !important;
+    border-style: inset; 
+    border-width: 5px;
 }
 
 .title_map{
@@ -123,10 +126,15 @@ body{
     width: 30%; /* Adjust the width of the image to 30% */
     height: 400px;
     width: 500px;
+    border-color: #4e4f4f !important;
+    border-style: inset; 
+    border-width: 5px;
   }
   
   .paragraph {
     width: 70%; /* Adjust the width of the paragraph to 70% */
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .container2 {
@@ -162,4 +170,6 @@ body{
     margin: 0 auto;
     font-size: small;
 }
+
+
 
