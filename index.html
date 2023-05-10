@@ -5,17 +5,23 @@
     <title>leaflet-elevation.js</title>
     <style>
     </style>
-    <h2 class="title_map" data-assembly-id="116049" ><strong>Terrain on the Great Plain: Map of Physical Landscape of Nerbraska</strong>   
-        <button id="introButton" onclick="openPopup()">Intro</button></h2>
-
+    <h2 class="title_map" data-assembly-id="116049"><strong>Terrain on the Great Plain: Map of Physical Landscape of
+            Nerbraska</strong>
+        <button id="introButton" onclick="openPopup()">Intro</button>
+    </h2>
+    <p></p>
 
     <div id="popup" class="popup">
-    <div class="popup-content">
-        <h2>Welcome to Explore Nebraska!</h2>
-        <p>This is an interactive map for exploring the elevation and slope along several essential highways across the Nebraska State. In our map, you can click the specific highway you want to explore and can check the elevation and slope attribute for every point along the highway. Furthermore, you can use the search function to relocate, and use the people function to view the environment around the highway, etc. </p>
-        <p>When you scroll down, you can find more information about the physical landscape information about Nebraska. Hope you can find interesting things and always exploring!</p>
-        <button id = "close_button" onclick="closePopup()">Close</button>
-    </div>
+        <div class="popup-content">
+            <h2>Welcome to Explore Nebraska!</h2>
+            <p>This is an interactive map for exploring the elevation and slope along several essential highways across
+                the Nebraska State. In our map, you can click the specific highway you want to explore and can check the
+                elevation and slope attribute for every point along the highway. Furthermore, you can use the search
+                function to relocate, and use the people function to view the environment around the highway, etc. </p>
+            <p>When you scroll down, you can find more information about the physical landscape information about
+                Nebraska. Hope you can find interesting things and always exploring!</p>
+            <button id="close_button" onclick="closePopup()">Close</button>
+        </div>
     </div>
     <!-- leaflet-ui -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -33,11 +39,13 @@
     <div id="map" class="leaflet-map"></div>
     <script type="text/javascript" src="js/main.js"></script>
 
-
-    <br><h2 class="h1" ><strong>Breif introduction to Nerbraska</strong></h2>
+    <!-- This is the first introduction paragraph -->
+    <br>
+    <h2 class="h1"><strong>Breif introduction to Nerbraska</strong></h2>
     <div class="container1">
         <img src="img/nebraska2.jpeg" alt="Image" class="image">
-        <p class="paragraph"><strong>Nebraska</strong>,<span>&nbsp;</span>constituent<span>&nbsp;</span>state<span>&nbsp;</span>of
+        <p class="paragraph">
+            <strong>Nebraska</strong>,<span>&nbsp;</span>constituent<span>&nbsp;</span>state<span>&nbsp;</span>of
             the<span>&nbsp;</span>United States<span>&nbsp;</span>of America. It was admitted to the
             union as the 37th state on March 1, 1867. <strong>Nebraska</strong> is bounded by the state
             of<span>&nbsp;</span>South Dakota<span>&nbsp;</span>to the north, with
@@ -53,7 +61,7 @@
             which creates <strong>Nebraska&rsquo;s</strong> panhandle, to the west of which is the
             boundary with<span>&nbsp;</span>Wyoming.<span>&nbsp;</span>Lincoln, in the southeastern part
             of the state, is the capital.<br>
-        <br>As one of the west-central states of the United States,
+            <br>As one of the west-central states of the United States,
             <strong>Nebraska</strong> was primarily a stopover point for
             those<span>&nbsp;</span>migrating<span>&nbsp;</span>to the rich trapping country to the
             north and west as well as to the settlement and mining frontiers of the mountain and Pacific
@@ -62,11 +70,10 @@
             consequent immigration, the fertile soils of <strong>Nebraska</strong> were plowed, and its
             grasslands gave rise to a range cattle industry. As a result, the state has been a major
             food producer since statehood. <br>
-        <br>Rivers have been important to <strong>Nebraska&rsquo;s</strong>
+            <br>Rivers have been important to <strong>Nebraska&rsquo;s</strong>
             geography and settlement. A majority of <strong>Nebraskans</strong> live close to
-            the<span>&nbsp;</span><span
-            id="ref614963"></span>Missouri<span>&nbsp;</span>and<span>&nbsp;</span><span
-            id="ref614207"></span>Platte<span>&nbsp;</span>rivers, leaving much of the state lightly
+            the<span>&nbsp;</span><span id="ref614963"></span>Missouri<span>&nbsp;</span>and<span>&nbsp;</span><span
+                id="ref614207"></span>Platte<span>&nbsp;</span>rivers, leaving much of the state lightly
             populated. The Missouri was a major highway to the trans-Mississippi West in the early 19th
             century. The Platte River has also played a significant role in
             <strong>Nebraska&rsquo;s</strong> history. In fact, the state&rsquo;s name is derived from
@@ -75,38 +82,81 @@
             77,347 square miles (200,329 square km). Population (2020) 1,961,504; (2022 est.) 1,967,923.
         </p>
     </div>
-      
-    <h2 class="h1">Landcover</h2>
 
+    <!-- this is the second content paragraph -->
+    <h2 class="h1">Landcover</h2>
 
     <div class="container2">
         <div id="map2" class="leaflet-map"></div>
-        <script type="text/javascript" src="js/img.js"></script> 
+        <script type="text/javascript" src="js/img.js"></script>
         <p class="paragraph2">Nebraska<span>&nbsp;</span>comprises<span>&nbsp;</span>parts of two of the United
-            States&rsquo; principal physiographic regions&mdash;the till plains of the Central Lowland (in the eastern third
-            of the state) and the<span>&nbsp;</span>Great Plains<span>&nbsp;</span>(which makes up the centre of the state).<br>
-        <br>The<span>&nbsp;</span><span id="ref799667"></span>Sand Hills<span>&nbsp;</span>region of
+            States&rsquo; principal physiographic regions&mdash;the till plains of the Central Lowland (in the eastern
+            third
+            of the state) and the<span>&nbsp;</span>Great Plains<span>&nbsp;</span>(which makes up the centre of the
+            state).<br>
+            <br>The<span>&nbsp;</span><span id="ref799667"></span>Sand Hills<span>&nbsp;</span>region of
             north-central and northwestern Nebraska is one of the state&rsquo;s most distinctive
-            features.<span>&nbsp;</span>Comprising<span>&nbsp;</span>nearly one-fourth of the area of the state, it consists
-            of sloping hills and valleys varying from 25 to 400 feet (8 to 120 metres) in elevation. With many small lakes
+            features.<span>&nbsp;</span>Comprising<span>&nbsp;</span>nearly one-fourth of the area of the state, it
+            consists
+            of sloping hills and valleys varying from 25 to 400 feet (8 to 120 metres) in elevation. With many small
+            lakes
             and luxuriant grasses, the Sand Hills area is a superb rangeland.<br>
-        <br>Elevation in Nebraska rises from a minimum of 840 feet (256 metres)
-            above<span>&nbsp;</span>sea level<span>&nbsp;</span>in the southeast to a maximum of 5,426 feet (1,654 metres)
-            near the Colorado and Wyoming boundaries. Much of the land is gently rolling<span>&nbsp;</span>prairie, although
-            the river valleys, much of south-central Nebraska, and a large portion of the panhandle district are flatlands.
+            <br>Elevation in Nebraska rises from a minimum of 840 feet (256 metres)
+            above<span>&nbsp;</span>sea level<span>&nbsp;</span>in the southeast to a maximum of 5,426 feet (1,654
+            metres)
+            near the Colorado and Wyoming boundaries. Much of the land is gently rolling<span>&nbsp;</span>prairie,
+            although
+            the river valleys, much of south-central Nebraska, and a large portion of the panhandle district are
+            flatlands.
         </p>
     </div>
+
+    <!-- This is the third content paragraph -->
+    <h2 class="h1"><strong>The Grat Plain</strong></h2>
+    <div class="container1">
+        <img src="img/the great plain.png" alt="Image" class="image">
+        <p class="paragraph">
+            The Great Plains are the broad expanse of prairie and steppe that lie east of the Rocky 
+            Mountains in the United States and Canada. This area covers parts of the U.S. states of Colorado, New Mexico, Texas, Oklahoma, Kansas, Nebraska, South Dakota, North Dakota, Montana, and Wyoming, and the Canadian provinces of Alberta, Saskatchewan, and Manitoba.<br>
+
+            <br>The region covers almost 500 miles (800 km) east to west and 3,000 miles (4,800 km) north to south. Much of the region was home to Native American tribes and enormous bison herds until their decimation during the mid/late 1800s.
+
+            Many areas of the Great Plains have become productive crop-growing areas due in part to extensive irrigation. While agriculture remains an important industry, it is no longer the major activity of most plains inhabitants. In the later half of the twentieth and twenty first centuries population has become more concentrated in urban areas. Employment is most often found largely in services, tourism, light manufacturing, construction, finance, insurance, and technology. <br>
+
+            <br>Between 570 and 70 million years ago, shallow seas covered the interior of North America, leaving behind 5,000 to 10,000 feet of layered sediment that eventually solidified into rock. The flat sea floor was created by slow uplift, and only the Black Hills experienced significant disturbance. The Rocky Mountains, however, were uplifted rapidly, causing sediment to be stripped from the mountain tops and deposited on the plains.<br>
+        </p>
+    </div>
+
+    <!-- This is the fourth content paragraph -->
+    <h2 class="h1"><strong>Soil Erosion On The Grat Plain</strong></h2>
+    <div class="container1">
+        <img src="img/soil erosion.png" alt="Image" class="image">
+        <p class="paragraph">
+
+            <br>Soil erosion is the removal of soil from a position on the landscape. The two main agents of soil erosion are wind and water. The type of erosion that occurs is generally related to climate. Because the climate of the Great Plains is relatively dry, and strong winds are common, wind erosion is widespread throughout the region. On May 12, 1934, for example, winds carried an estimated 200 million tons of soil from the Southern Great Plains over 1,500 miles to the Atlantic Ocean. Ideal conditions for wind erosion are loose, finely divided and dry soil on a bare, smooth surface.<br>
+
+            <br>Wind erosion moves soil in three ways: suspension, saltation, and surface creep. Very fine particles (less than 0.05 mm in diameter) can be blown into the air and carried in suspension for long distances. The particles fall out of suspension when the wind velocity is reduced or they are washed out by rain. Soil grains between 0.05 mm and 0.5 mm in diameter are too heavy to be suspended. These grains are lifted briefly in the air, move a short distance, and fall back to the surface. Most soil eroded by wind moves by this type of motion (saltation). Saltating grains generally bounce along the surface of the soil until the wind velocity lessens or they meet some obstruction. These grains may knock other grains into the air. Soil grains between 0.5 mm and 1 mm in diameter are too large to be lifted into the wind stream. They are bumped along the soil surface by saltating grains in a movement called surface creep. Soil grains moving by saltation are the keys to wind erosion. Saltating grains increase the number of smaller and larger particles that move in suspension or by soil creep.<br>
+
+            <br>Water erosion is more prominent in humid regions. It does, however, occur in the Great Plains especially on sloping landscapes. In 1992 the average annual water erosion rate on cropland was estimated at 3.1 tons per acre. The movement of soil by water is a complex process that is influenced by the amount, duration, and intensity of rainfall, as well as by the nature of the soil, ground cover, and slope of the land. Raindrops play a substantial part in the movement of soil by water. Soil grains are detached from the soil mass by the force of raindrops striking the soil grains. The soil grains may then be splashed, rolled, slid, or carried in suspension along the land surface.
+        </p>
+    </div>
+
+    <!-- This is the footer of the website -->
     <div class="container3">
-        <p class = "paragraph3">
-            <br>Data Source: <a href = 'https://uw-mad.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc'> ArcGIS Online Gallery</a>, 
-            <a href = 'https://www.nebraskamap.gov/datasets/190f9fabe7e6420bb1bb418f72d34715_4/explore?location=41.178362%2C-97.308265%2C6.51'> Nebraska Highway Data</a>,
-            <a href = 'https://github.com/Raruto/leaflet-elevation'> Interactive Map Source github</a>
-            | Cartographers: <a href = 'https://github.com/daniell23/2023_FinalProject'> Dong Gai</a> (dgai@wisc.edu) 
+        <p class="paragraph3">
+            <br>Data Source: <a href='https://uw-mad.maps.arcgis.com/home/gallery.html?sortField=title&sortOrder=asc'>
+                ArcGIS Online Gallery</a>,
+            <a
+                href='https://www.nebraskamap.gov/datasets/190f9fabe7e6420bb1bb418f72d34715_4/explore?location=41.178362%2C-97.308265%2C6.51'>
+                Nebraska Highway Data</a>,
+            <a href='https://github.com/Raruto/leaflet-elevation'> Interactive Map Source github</a>
+            | Cartographers: <a href='https://github.com/daniell23/2023_FinalProject'> Dong Gai</a> (dgai@wisc.edu)
             <br>
         </p>
     </div>
 
-</section>
+
+    </section>
 
 
 </html>
